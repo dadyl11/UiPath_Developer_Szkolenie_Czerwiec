@@ -540,7 +540,7 @@
         <li>Pobierz nagłówek strony zawierający datę kursów</li>
         <li>Pobierz tabelę walut ze strony (<code>Extract Table Data</code>) — kolumny: <code>Nazwa waluty</code>, <code>Kod waluty</code>, <code>Kurs średni</code></li>
         <li>Zapisz tabelę do pliku <code>"Kurs-tabela-A-[data].xlsx"</code></li>
-        <li>Przefiltruj tabelę — zostaw tylko wiersz z walutą <strong>"euro"</strong></li>
+        <li>Znajdż kurs euro za pomocą Lookup Data Table <strong>"euro"</strong></li>
         <li>Wyświetl kurs euro w Log Message</li>
       </ol>
       <h4>Wskazówki</h4>
@@ -548,14 +548,13 @@
         <li>Użyj <code>Use Application/Browser</code> do otwarcia strony</li>
         <li><code>Get Text</code> do pobrania daty ze strony</li>
         <li><code>Extract Table Data</code> do pobrania tabeli kursów</li>
-        <li><code>Filter Data Table</code> do wyfiltrowania euro</li>
+        <li><code>Lookup Data Table</code> do wyfiltrowania kursu euro</li>
       </ul>
       <h4>Zmienne</h4>
       <table>
         <tr><th>Nazwa</th><th>Typ</th><th>Opis</th></tr>
         <tr><td>str_data</td><td>String</td><td>Data kursów ze strony</td></tr>
-        <tr><td>ExtractDataTable</td><td>DataTable</td><td>Cała tabela walut</td></tr>
-        <tr><td>dt_euro</td><td>DataTable</td><td>Przefiltrowana tabela (tylko euro)</td></tr>
+        <tr><td>dt_waluty</td><td>DataTable</td><td>Cała tabela walut</td></tr>
         <tr><td>str_euro</td><td>String</td><td>Wartość kursu euro</td></tr>
       </table>
     </div>
